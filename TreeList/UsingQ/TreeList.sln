@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+# Clarion 2.1.0.2447
+Project("{12B76EC0-1D7B-4FA7-A7D0-C524288B48A1}") = "TreeList", "TreeList.cwproj", "{1B2F2C5A-AFD0-4FD8-8F89-28705BD607A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B2F2C5A-AFD0-4FD8-8F89-28705BD607A7}.Debug|Win32.Build.0 = Debug|Win32
+		{1B2F2C5A-AFD0-4FD8-8F89-28705BD607A7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1B2F2C5A-AFD0-4FD8-8F89-28705BD607A7}.Release|Win32.Build.0 = Release|Win32
+		{1B2F2C5A-AFD0-4FD8-8F89-28705BD607A7}.Release|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+EndGlobal
