@@ -25,5 +25,9 @@
   <ItemGroup>
     <Compile Include="TreeList.clw" />
   </ItemGroup>
+  <ItemGroup>
+    <Library Include="VCRDown.ico" />
+    <Library Include="VCRnext.ico" />
+  </ItemGroup>
   <Import Project="$(ClarionBinPath)\SoftVelocity.Build.Clarion.targets" />
 </Project>

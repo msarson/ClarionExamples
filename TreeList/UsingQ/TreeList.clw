@@ -52,7 +52,7 @@ x                   long
     ?Show{prop:lineheight} = 10
     ?Show{PROP:iconlist,1} = ICON:VCRback       !Icon 1 = <
     ?Show{PROP:iconlist,2} = ICON:VCRrewind     !Icon 2 = <<
-    ?Show{PROP:iconlist,3} = 'VCRdown.ico'      !Icon 3 = > not linked into project
+    ?Show{PROP:iconlist,3} = '~VCRdown.ico'      !Icon 3 = > MS Added to projec so it is linked in
     ?Show{PROP:iconlist,4} = '~VCRnext.ico'     !Icon 4 = >>linked into project
 
     ACCEPT
