@@ -26,6 +26,7 @@
     <Compile Include="TreeList.clw" />
   </ItemGroup>
   <ItemGroup>
+    <Library Include="TreeList.EXE.Manifest" />
     <Library Include="VCRDown.ico" />
     <Library Include="VCRnext.ico" />
   </ItemGroup>

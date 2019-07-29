@@ -23,11 +23,13 @@ Init                    STRING(4)
 
  
 
-Win                 WINDOW('List Box'),AT(0,0,374,314),FONT('Tahoma',8,,FONT:regular,CHARSET:ANSI),|
-                        SYSTEM,GRAY,DOUBLE
-                        LIST,AT(3,4,369,306),USE(?Show),HVSCROLL,COLOR(,COLOR:Black,0E7E7E7H),|
-                            FORMAT('121L(2)|M*IT~First Name~149L(2)|M~Last Name~16C(2)|M~Initials~'), |
-                            FROM(TreeDemo),GRID(0E7E7E7H)
+Win                 WINDOW('List Box'),AT(0,0,374,283),GRAY,SYSTEM,FONT('Segoe UI',8,, |
+                        FONT:regular,CHARSET:ANSI),DOUBLE
+                        LIST,AT(3,4,369,254),USE(?Show),HVSCROLL,COLOR(,COLOR:Black,0E7E7E7H), |
+                            FROM(TreeDemo),GRID(0e7e7e7H),FORMAT('121L(2)|M*IT~First Name~14' & |
+                            '9L(2)|M~Last Name~16C(2)|M~Initials~')
+                        BUTTON('Contract All'),AT(2,262,50,19),USE(?btnContract)
+                        BUTTON('Expand All'),AT(56,262,50,19),USE(?btnExpand)
                     END
 
 x                   long
@@ -56,6 +58,26 @@ x                   long
     ?Show{PROP:iconlist,4} = '~VCRnext.ico'     !Icon 4 = >>linked into project
 
     ACCEPT
+        CASE ACCEPTED()
+        of ?btnContract
+            LOOP i# = 1 to RECORDS(TreeDemo)
+                GET(TreeDemo,i#)
+                if TreeDemo.TreeLevel > 0
+                    TreeDemo.TreeLevel = -TreeDemo.TreeLevel   !Set to negative value
+                    PUT(TreeDemo)
+                END
+            END
+            DISPLAY()
+        of ?btnExpand
+            LOOP i# = 1 to RECORDS(TreeDemo)
+                GET(TreeDemo,i#)
+                if TreeDemo.TreeLevel < 0
+                    TreeDemo.TreeLevel = TreeDemo.TreeLevel * -1 !Set to positive value
+                    PUT(TreeDemo)
+                END
+            END
+           ! DISPLAY()            
+        END
 
     END
 
