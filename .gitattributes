@@ -1,7 +1,15 @@
-# Set the default behavior, in case people don't have core.autocrlf set.
-* text eol=crlf
-*.png -text
-*.ico -text
-*.jpg -text
-*.bmp -text
-*.cur -text
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Custom for clarion
+*.inc text eol=crlf
+*.clw text eol=crlf
+*.red text eol=crlf
+
+# Explicitly declare text files you want to always be normalized and converted
+# to native line endings on checkout.
+*.clw text
+*.inc text
+*.int text
+*.cwproj text
+*.sln text
